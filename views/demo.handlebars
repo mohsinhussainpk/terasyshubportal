@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.css" />
+<link href="css/ctooltip.css" rel="stylesheet" />
+<link href="css/demo.css" rel="stylesheet" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.0/chartist.min.js"></script>
+
+<script src="js/ctooltip.js"></script>
+
+<script src="js/demo.js"></script>
+
+<div class="container-fluid demo-container">
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="user">
+                Logged in as <span class="email">{{user.email}}</span>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="logout">Logout</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3 col-sm-offset-9">
+            <div class="form-group">
+                <label for="devices">Devices:</label>
+                <select class="form-control" id="devices" data-tok="{{token}}">
+                    {{#each devices}}
+                        <option value="{{mac}}">{{name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row tempRow">
+        <div class="col-sm-8 chart">
+            <h4 style="text-align:left">Temperature</h4>
+            <!--<div id="chartdiv" style="width:100%;height:300px;"></div>-->
+            <div class="ct-chart-temp ct-double-octave"></div>
+        </div>
+        <div class="col-sm-4 raw">
+            <h4 style="text-align:left">Live Feed (Raw)</h4>
+            <div class="data" style="height:230px;max-height:230px;overflow-y:scroll;font-size:12px"></div>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="row humRow">
+        <div class="col-sm-8 chart">
+            <h4 style="text-align:left">Humidity</h4>
+            <div class="ct-chart-hum ct-double-octave"></div>
+        </div>
+        <div class="col-sm-4 raw">
+            <h4 style="text-align:left">Live Feed (Raw)</h4>
+            <div class="data" style="height:230px;max-height:230px;overflow-y:scroll;font-size:12px"></div>
+        </div>
+    </div>
+
+</div>

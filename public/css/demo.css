@@ -1,0 +1,35 @@
+.demo-container{
+    margin:20px;
+}
+
+.logout{
+    position:relative;
+    text-align:right;
+    font-size:14px;
+    color:dimgrey;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.logout:hover{
+    color:grey;
+}
+
+.user .email{
+    font-size:14px;
+    color:dimgrey;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.ct-grids .ct-grid,
+.ct-labels .ct-label {
+    font-size:80%;
+    stroke: black;
+    color:black;
+}
+
+.ct-chart-hum .ct-series-a .ct-bar,
+.ct-chart-hum .ct-series-a .ct-point {
+    stroke: blue;
+}
